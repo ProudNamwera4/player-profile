@@ -1,6 +1,10 @@
+// app.js
 const express = require("express");
 const app = express();
 const { initDb } = require("./data/database");
+
+const swaggerUi = require("swagger-ui-express");
+const swaggerDocument = require("./swagger.json");
 
 initDb((err, database) => {
   if (err) {

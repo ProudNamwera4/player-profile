@@ -11,6 +11,10 @@ exports.getPlayers = async (req, res) => {
 
 exports.createPlayer = async (req, res) => {
   try {
+    if (!req.body) {
+      res.status(400).json({ message: "No player data provided" });
+      return;
+    }
     const newPlayer = new player(req.body);
     await newPlayer.save();
     res.json(newPlayer);

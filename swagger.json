@@ -37,6 +37,16 @@
                     "players"
                 ],
                 "summary": "Create a new player",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "player",
+                        "description": "Player data",
+                        "schema": {
+                            "$ref": "#/definitions/Player"
+                        }
+                    }
+                ],
                 "requestBody": {
                     "required": true,
                     "content": {
