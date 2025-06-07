@@ -1,0 +1,17 @@
+http
+GET http://localhost:3000/api/players
+
+
+POST http://localhost:3000/api/players
+
+Content-Type: application/json
+
+{
+  "name": "Proud Namwera",
+  "position": "Midfielder",
+  "team": "Thunders FC",
+  "age": 30,
+  "appearance": 6,
+    "goals": 1,
+    "assists": 5
+}
